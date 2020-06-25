@@ -15,7 +15,7 @@ const ministryLength = 60;
 // Below function Executes on click of login button.
 function login(){
     //api url for login verification
-    var url = .SERVER_URL_PREFIX + '/auth/login';
+    var url = SERVER_URL_PREFIX + '/auth/login';
     
     //store token
     var token;
