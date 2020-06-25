@@ -1366,7 +1366,7 @@ postData({ login: true })
 // Below function Executes on click of login button.
 function loadAllConcoursAcceuil(){
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
