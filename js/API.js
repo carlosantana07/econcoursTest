@@ -3481,9 +3481,9 @@ postData({ login: true })
     
 }
 //==========================================================================================================================================
-function orange(){
+/*function orange(){
      //api url for login verification
-    var url = 'https://cors-anywhere.herokuapp.com/https://apiom.orange.bf:9007/payment';
+    var url = ORANGE_API;
     
     //store token
     var token;
@@ -3528,14 +3528,14 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashOuverture(){
      //api url for login verification
-    var url = .ORANGE_API;
+    var url = MOBICASH_API;
     
 // Login  method implementation:
 async function postData(data ={}) {
     
     
     data.login = .MOBICASH_USER;
-    data.password = .MOBICASH_PWD;
+    data.password = MOBICASH_PWD;
     console.log("ouverture");
   //fetching values to api for verification
   const response = await fetch(url, {
@@ -3569,7 +3569,7 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashPay(token){
      //api url for login verification
-    var url = .MOBICASH_API;
+    var url = MOBICASH_API;
     
     
 // Login  method implementation:
@@ -3579,7 +3579,7 @@ async function postData() {
     data.merchantTxnid = makeID();
     data.customerMsisdn = localStorage.getItem("payTelephone");
     
-    data.receiverMsisdn = .MOBICASH_RECEIVERMSISDN;
+    data.receiverMsisdn = MOBICASH_RECEIVERMSISDN;
     data.merchantPin = "1010";
     data.billCode = "NA";
     data.billTaxe = "0";
@@ -3600,7 +3600,7 @@ async function postData() {
       'serviceName' : "INITPAID",
       'token': token,
       'type': 'MPREQ',
-      'merchant-id': .MOBICASH_MERCHANDID   
+      'merchant-id': MOBICASH_MERCHANDID   
     },
     redirect: 'follow', 
     referrerPolicy: 'no-referrer', 
@@ -3622,7 +3622,7 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashVerification(){
      //api url for login verification
-    var url = .MOBICASH_API;
+    var url = MOBICASH_API;
     
     
 // Login  method implementation:
@@ -3644,7 +3644,7 @@ async function postData() {
       'serviceName' : "VRIFYPAID",
       'token': localStorage.getItem("mobicashToken"),
       'type': 'MPREQ',
-      'merchant-id': .MOBICASH_MERCHANDID     
+      'merchant-id': MOBICASH_MERCHANDID     
     },
     redirect: 'follow', 
     referrerPolicy: 'no-referrer', 
@@ -3681,5 +3681,5 @@ function paySelections(){
     } else if(document.getElementById('paySelection').value == "MC"){
         mobicashVerification();
     }
-}
+}*/
 //==========================================================================================================================================
