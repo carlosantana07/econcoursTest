@@ -91,7 +91,7 @@ const ministryLength = 60;
 // Below function Executes on click of login button.
 function login(){
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/auth/login';
+    var url = SERVER_URL_PREFIX + '/auth/login';
     
     //store token
     var token;
@@ -386,7 +386,7 @@ postData({ change: true })
 function updateProfile(){
     
    //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/candidat/update';
+    var url = SERVER_URL_PREFIX + '/candidat/update';
     //user credentials
     var user = {login: false};
     //store token
@@ -503,7 +503,7 @@ function loadAllConcours(){
     nomAcademique = [];
     
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
+    var url = SERVER_URL_PREFIX + '/exams/getall';
 
 // Login  method implementation:
 async function postData(data ={}) {
@@ -682,7 +682,7 @@ postData({ login: true })
 function loadConcoursPro(){
     setUser();
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
+    var url = SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -873,7 +873,7 @@ function loadConcoursDirect(){
     
     setUser();
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
+    var url = SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -1060,7 +1060,7 @@ postData({ login: true })
 function loadConcoursProAcceuil(){
     
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
+    var url = SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -1251,7 +1251,7 @@ postData({ login: true })
 function loadConcoursDirectAcceuil(){
     
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
+    var url = SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -2025,7 +2025,7 @@ function loadMinistere(){
 function validateOTP(){
     
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/econcours/otp/erify';
+    var url = SERVER_URL_PREFIX + '/econcours/otp/erify';
     
     //getting the code from page
     var code = document.getElementById("numCle").value;
@@ -2071,7 +2071,7 @@ function validateOTP(){
 function sendOTP(){
     
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/econcours/getotp';
+    var url = SERVER_URL_PREFIX + '/econcours/getotp';
     
     //setting telephone value 
     var telephone = document.getElementById("otptelephone").value;
@@ -2133,7 +2133,7 @@ postData({ login: true })
 function resendOTP(){
     
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/econcours/getotp';
+    var url = SERVER_URL_PREFIX + '/econcours/getotp';
     
     // Login  method implementation:
     async function postData(data ={}) {
@@ -2372,7 +2372,7 @@ function loadDocumentPreview(){
 function saveDocument(){
     
    //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/documentid/add';
+    var url = SERVER_URL_PREFIX + '/documentid/add';
     
     const formData = new FormData();
 
@@ -2405,7 +2405,7 @@ function applyConcours(){
     
     setUser();
      //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/admin/candidate/exam/add';
+    var url = SERVER_URL_PREFIX + '/admin/candidate/exam/add';
 
 // Login  method implementation:
 async function postData(data ={}) {
@@ -2470,7 +2470,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", process.env.SERVER_URL_PREFIX + "/candidats/center/subcenter");
+xhr.open("POST", SERVER_URL_PREFIX + "/candidats/center/subcenter");
 xhr.setRequestHeader("content-type", "application/json");
 xhr.setRequestHeader("servicename", "INITPAID");
 xhr.setRequestHeader("type", "MPREQ");
@@ -2613,7 +2613,7 @@ function loadCandidatDocuments(){
     
     setUser();
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/documentid/byuser';
+    var url = SERVER_URL_PREFIX + '/documentid/byuser';
 
 // Login  method implementation:
 async function postData(data ={}) {
@@ -2777,7 +2777,7 @@ function deleteCandidatDocuments(id){
     if (r == true) {
     
     //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/documentid/delete';
+    var url = SERVER_URL_PREFIX + '/documentid/delete';
 
 // Login  method implementation:
 async function postData(data ={}) {
@@ -3116,7 +3116,7 @@ function loadMinistry(id){
 //==========================================================================================================================================
 function loadMinistryInfo(){
   //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
+    var url = SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -3341,7 +3341,7 @@ function loadMinistryInfoUser(){
     
     setUser();
   //api url for login verification
-    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
+    var url = SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -3604,14 +3604,14 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashOuverture(){
      //api url for login verification
-    var url = process.env.ORANGE_API;
+    var url = ORANGE_API;
     
 // Login  method implementation:
 async function postData(data ={}) {
     
     
-    data.login = process.env.MOBICASH_USER;
-    data.password = process.env.MOBICASH_PWD;
+    data.login = MOBICASH_USER;
+    data.password = MOBICASH_PWD;
     console.log("ouverture");
   //fetching values to api for verification
   const response = await fetch(url, {
@@ -3645,7 +3645,7 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashPay(token){
      //api url for login verification
-    var url = process.env.MOBICASH_API;
+    var url = MOBICASH_API;
     
     
 // Login  method implementation:
@@ -3655,7 +3655,7 @@ async function postData() {
     data.merchantTxnid = makeID();
     data.customerMsisdn = localStorage.getItem("payTelephone");
     
-    data.receiverMsisdn = process.env.MOBICASH_RECEIVERMSISDN;
+    data.receiverMsisdn = MOBICASH_RECEIVERMSISDN;
     data.merchantPin = "1010";
     data.billCode = "NA";
     data.billTaxe = "0";
@@ -3676,7 +3676,7 @@ async function postData() {
       'serviceName' : "INITPAID",
       'token': token,
       'type': 'MPREQ',
-      'merchant-id': process.env.MOBICASH_MERCHANDID   
+      'merchant-id': MOBICASH_MERCHANDID   
     },
     redirect: 'follow', 
     referrerPolicy: 'no-referrer', 
@@ -3698,7 +3698,7 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashVerification(){
      //api url for login verification
-    var url = process.env.MOBICASH_API;
+    var url = MOBICASH_API;
     
     
 // Login  method implementation:
@@ -3720,7 +3720,7 @@ async function postData() {
       'serviceName' : "VRIFYPAID",
       'token': localStorage.getItem("mobicashToken"),
       'type': 'MPREQ',
-      'merchant-id': process.env.MOBICASH_MERCHANDID     
+      'merchant-id': MOBICASH_MERCHANDID     
     },
     redirect: 'follow', 
     referrerPolicy: 'no-referrer', 
