@@ -15,7 +15,7 @@ const ministryLength = 60;
 // Below function Executes on click of login button.
 function login(){
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/auth/login';
+    var url = process.env.SERVER_URL_PREFIX + '/auth/login';
     
     //store token
     var token;
@@ -310,7 +310,7 @@ postData({ change: true })
 function updateProfile(){
     
    //api url for login verification
-    var url = SERVER_URL_PREFIX + '/candidat/update';
+    var url = process.env.SERVER_URL_PREFIX + '/candidat/update';
     //user credentials
     var user = {login: false};
     //store token
@@ -427,7 +427,7 @@ function loadAllConcours(){
     nomAcademique = [];
     
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
 // Login  method implementation:
 async function postData(data ={}) {
@@ -606,7 +606,7 @@ postData({ login: true })
 function loadConcoursPro(){
     setUser();
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -797,7 +797,7 @@ function loadConcoursDirect(){
     
     setUser();
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -984,7 +984,7 @@ postData({ login: true })
 function loadConcoursProAcceuil(){
     
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -1175,7 +1175,7 @@ postData({ login: true })
 function loadConcoursDirectAcceuil(){
     
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -1366,7 +1366,7 @@ postData({ login: true })
 // Below function Executes on click of login button.
 function loadAllConcoursAcceuil(){
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -1949,7 +1949,7 @@ function loadMinistere(){
 function validateOTP(){
     
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/econcours/otp/erify';
+    var url = process.env.SERVER_URL_PREFIX + '/econcours/otp/erify';
     
     //getting the code from page
     var code = document.getElementById("numCle").value;
@@ -1995,7 +1995,7 @@ function validateOTP(){
 function sendOTP(){
     
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/econcours/getotp';
+    var url = process.env.SERVER_URL_PREFIX + '/econcours/getotp';
     
     //setting telephone value 
     var telephone = document.getElementById("otptelephone").value;
@@ -2057,7 +2057,7 @@ postData({ login: true })
 function resendOTP(){
     
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/econcours/getotp';
+    var url = process.env.SERVER_URL_PREFIX + '/econcours/getotp';
     
     // Login  method implementation:
     async function postData(data ={}) {
@@ -2296,7 +2296,7 @@ function loadDocumentPreview(){
 function saveDocument(){
     
    //api url for login verification
-    var url = SERVER_URL_PREFIX + '/documentid/add';
+    var url = process.env.SERVER_URL_PREFIX + '/documentid/add';
     
     const formData = new FormData();
 
@@ -2329,7 +2329,7 @@ function applyConcours(){
     
     setUser();
      //api url for login verification
-    var url = SERVER_URL_PREFIX + '/admin/candidate/exam/add';
+    var url = process.env.SERVER_URL_PREFIX + '/admin/candidate/exam/add';
 
 // Login  method implementation:
 async function postData(data ={}) {
@@ -2394,7 +2394,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", SERVER_URL_PREFIX + "/candidats/center/subcenter");
+xhr.open("POST", process.env.SERVER_URL_PREFIX + "/candidats/center/subcenter");
 xhr.setRequestHeader("content-type", "application/json");
 xhr.setRequestHeader("servicename", "INITPAID");
 xhr.setRequestHeader("type", "MPREQ");
@@ -2537,7 +2537,7 @@ function loadCandidatDocuments(){
     
     setUser();
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/documentid/byuser';
+    var url = process.env.SERVER_URL_PREFIX + '/documentid/byuser';
 
 // Login  method implementation:
 async function postData(data ={}) {
@@ -2701,7 +2701,7 @@ function deleteCandidatDocuments(id){
     if (r == true) {
     
     //api url for login verification
-    var url = SERVER_URL_PREFIX + '/documentid/delete';
+    var url = process.env.SERVER_URL_PREFIX + '/documentid/delete';
 
 // Login  method implementation:
 async function postData(data ={}) {
@@ -3040,7 +3040,7 @@ function loadMinistry(id){
 //==========================================================================================================================================
 function loadMinistryInfo(){
   //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];
@@ -3265,7 +3265,7 @@ function loadMinistryInfoUser(){
     
     setUser();
   //api url for login verification
-    var url = SERVER_URL_PREFIX + '/exams/getall';
+    var url = process.env.SERVER_URL_PREFIX + '/exams/getall';
 
     concours = [];
     nomConcours = [];

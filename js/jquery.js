@@ -3818,4 +3818,3 @@
     }, typeof b === K && (a.jQuery = a.$ = m), m
 });
 jQuery.noConflict();
-const SERVER_URL_PREFIX = 'https://soasga.com/api/v1';
