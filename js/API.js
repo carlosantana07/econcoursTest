@@ -3528,14 +3528,14 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashOuverture(){
      //api url for login verification
-    var url = 'https://cors-anywhere.herokuapp.com/http://196.28.243.158:8443/mobicash/v1/webservices';
+    var url = process.env.ORANGE_API;
     
 // Login  method implementation:
 async function postData(data ={}) {
     
     
-    data.login = "226Econcours";
-    data.password = "XEc@n20$";
+    data.login = process.env.MOBICASH_USER;
+    data.password = process.env.MOBICASH_PWD;
     console.log("ouverture");
   //fetching values to api for verification
   const response = await fetch(url, {
@@ -3569,7 +3569,7 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashPay(token){
      //api url for login verification
-    var url = 'https://cors-anywhere.herokuapp.com/http://196.28.243.158:8443/mobicash/v1/webservices';
+    var url = process.env.MOBICASH_API;
     
     
 // Login  method implementation:
@@ -3579,7 +3579,7 @@ async function postData() {
     data.merchantTxnid = makeID();
     data.customerMsisdn = localStorage.getItem("payTelephone");
     
-    data.receiverMsisdn = "60828066";
+    data.receiverMsisdn = process.env.MOBICASH_RECEIVERMSISDN;
     data.merchantPin = "1010";
     data.billCode = "NA";
     data.billTaxe = "0";
@@ -3600,7 +3600,7 @@ async function postData() {
       'serviceName' : "INITPAID",
       'token': token,
       'type': 'MPREQ',
-      'merchant-id': 'MERCDGOVS24001'    
+      'merchant-id': process.env.MOBICASH_MERCHANDID   
     },
     redirect: 'follow', 
     referrerPolicy: 'no-referrer', 
@@ -3622,7 +3622,7 @@ postData({ login: true })
 //==========================================================================================================================================
 function mobicashVerification(){
      //api url for login verification
-    var url = 'https://cors-anywhere.herokuapp.com/http://196.28.243.158:8443/mobicash/v1/webservices';
+    var url = process.env.MOBICASH_API;
     
     
 // Login  method implementation:
@@ -3644,7 +3644,7 @@ async function postData() {
       'serviceName' : "VRIFYPAID",
       'token': localStorage.getItem("mobicashToken"),
       'type': 'MPREQ',
-      'merchant-id': 'MERCDGOVS24001'    
+      'merchant-id': process.env.MOBICASH_MERCHANDID     
     },
     redirect: 'follow', 
     referrerPolicy: 'no-referrer', 
