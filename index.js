@@ -10,6 +10,9 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
+require('dotenv').config();
+console.log(process.env);
+
 var SERVER_URL_PREFIX; 
 
 http.createServer(function(req, res){
