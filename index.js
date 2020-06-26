@@ -19,6 +19,13 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + './Acceuil.html');
 });
 
+
+app.get('/auth', function(req, res) {
+    res.send({
+        variable: true
+    });
+});
+
 // listen for requests :)
 const listener = app.listen(port, function() {
   console.log('Your app is listening on port ' + listener.address().port);
