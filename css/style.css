@@ -741,6 +741,15 @@ address {
 	padding-left:1.0714285714286em;
 	padding-right:1.0714285714286em;
 }
+
+.container-boxed2 {
+	margin-right:auto;
+	margin-left:auto;
+	padding-left:1.0714285714286em;
+	padding-right:1.0714285714286em;
+    text-align: justify;
+}
+
 @media (min-width: 768px) {
 .container-boxed {
 	width:96.2%;
@@ -12381,6 +12390,7 @@ body.nice-scroll .nicescroll-rails {
 .parallax-content {
   position: relative;
   z-index: 1;
+ max-width: 100%;
 }
 @media (max-width: 768px) {
   [data-parallax="1"].parallax[data-parallax_no_mobile="0"] {
@@ -15425,156 +15435,9 @@ fieldset[disabled] .navbar-nav li.menu-item-post-btn > a:hover {
 }
 
 
-/* Table Styles */
-
-.table-wrapper{
-    margin: 10px 70px 70px;
-    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
-}
-
-.fl-table {
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: normal;
-    border: none;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
-    white-space: nowrap;
-    background-color: white;
-}
-
-.fl-table td, .fl-table th {
-    text-align: center;
-    padding: 8px;
-}
-
-.fl-table td {
-    border-right: 1px solid #f8f8f8;
-    font-size: 12px;
-}
-
-.fl-table thead th {
-    color: #ffffff;
-    background: #4FC3A1;
-}
-
-
-.fl-table thead th:nth-child(odd) {
-    color: #ffffff;
-    background: #324960;
-}
-
-.fl-table tr:nth-child(even) {
-    background: #F8F8F8;
-}
-
-/* Responsive */
-
-@media (max-width: 767px) {
-    .fl-table {
-        display: block;
-        width: 100%;
-    }
-    .table-wrapper:before{
-        content: "Scroll horizontally >";
-        display: block;
-        text-align: right;
-        font-size: 11px;
-        color: white;
-        padding: 0 0 10px;
-    }
-    .fl-table thead, .fl-table tbody, .fl-table thead th {
-        display: block;
-    }
-    .fl-table thead th:last-child{
-        border-bottom: none;
-    }
-    .fl-table thead {
-        float: left;
-    }
-    .fl-table tbody {
-        width: auto;
-        position: relative;
-        overflow-x: auto;
-    }
-    .fl-table td, .fl-table th {
-        padding: 20px .625em .625em .625em;
-        height: 60px;
-        vertical-align: middle;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: auto;
-        width: 120px;
-        font-size: 13px;
-        text-overflow: ellipsis;
-    }
-    .fl-table thead th {
-        text-align: left;
-        border-bottom: 1px solid #f7f7f9;
-    }
-    .fl-table tbody tr {
-        display: table-cell;
-    }
-    .fl-table tbody tr:nth-child(odd) {
-        background: none;
-    }
-    .fl-table tr:nth-child(even) {
-        background: transparent;
-    }
-    .fl-table tr td:nth-child(odd) {
-        background: #F8F8F8;
-        border-right: 1px solid #E6E4E4;
-    }
-    .fl-table tr td:nth-child(even) {
-        border-right: 1px solid #E6E4E4;
-    }
-    .fl-table tbody td {
-        display: block;
-        text-align: center;
-    }
-}
 
 
 
-@media 
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	tr { border: 1px solid #ccc; }
-	
-	td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-	}
-	
-	td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-	}
-    
-    
     
     
     /* latin */
@@ -15969,4 +15832,30 @@ only screen and (max-width: 760px),
   font-weight: 900;
   src: local('Montserrat Black'), local('Montserrat-Black'), url(http://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_epG3gnD_vx3rCs.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+
+.container{
+  padding-top:50px;
+  margin: auto;
+}
+
+
+
+.canvas2 {
+    
+    overflow: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    max-width:100%;
+    margin: auto;
+}
+
 }

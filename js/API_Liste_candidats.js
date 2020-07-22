@@ -10,7 +10,7 @@ function getElement(id) {
   return document.getElementById(id);
 }
 
-fetch('https://soasga.com//api/v1/candidats/getall', {
+fetch('https://cors-anywhere.herokuapp.com/https://soasga.com//api/v1/candidats/getall', {
   method: 'POST', // or 'PUT'
   headers: {
     'Content-Type': 'application/json',

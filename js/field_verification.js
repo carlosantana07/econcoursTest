@@ -1,6 +1,19 @@
 //
 //==========================================================================================================================================
 //validating the email as the user is inputing it 
+function loginLoading() {
+    
+    localStorage.username = "+"+document.getElementById("username").value;
+    localStorage.password = document.getElementById("password").value;  
+    
+    window.location.href = "Loading.html";
+    
+    login();
+        
+    
+}
+//==========================================================================================================================================
+//validating the email as the user is inputing it 
 function validateEmail() {
     //creating varibles from the textfields and trimming the spaces out
     var email = (document.getElementById("email").value).replace(/ /g,'');
@@ -10,6 +23,12 @@ function validateEmail() {
         document.getElementById("emailDiv").className = "col-sm-8";
         return (true);
     }
+    
+    
+    document.getElementById("messageErreur").innerHTML = "Veuillez saisir une adresse mail suivant le format suivant: \n\n  Test@gmail.com ";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
     document.getElementById("emailDiv").className = document.getElementById("emailDiv").className + " has-error";  // this adds the error class
     return false;
 }
@@ -56,7 +75,10 @@ function validateTelephonePay(){
         }
         
         //setting the textfield as red if there's an error
-        alert("Entrez un numéro dans les formats suivants: \n 22670707070 \n ou \n 70707070 ")
+        document.getElementById("messageErreur").innerHTML = "Entrez un numéro dans les formats suivants: \n 22670707070 \n ou \n 70707070 ";
+        jQuery(document).ready(function ($) {
+            $('#errorMessages').modal('show');
+        });
         return (false);
     }
 }
@@ -77,7 +99,10 @@ function validateTelephone(){
         return true;
     }
     //setting the textfield as red if there's an error
-    alert("Entrez un numéro dans les formats suivants: \n 22670707070 \n ou \n 70707070 ")
+    document.getElementById("messageErreur").innerHTML = "Entrez un numéro dans les formats suivants: \n 22670707070 \n ou \n 70707070 ";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
    return (false);
 }
 //==========================================================================================================================================
@@ -91,6 +116,10 @@ function validateEmailConfirm() {
         document.getElementById("emailDiv_confirm").className = "col-sm-8";
         return (true);
     }
+    document.getElementById("messageErreur").innerHTML = "Veuillez saisir une adresse mail suivant le format suivant: \n\n  Test@gmail.com ";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
     document.getElementById("emailDiv_confirm").className = document.getElementById("emailDiv_confirm").className + " has-error";  // this adds the error class
     return false;
 }
@@ -215,7 +244,7 @@ function validateMinistere(){
 function validateDateNaissance(){
     //creating varibles from the textfields and trimming the spaces out
      var dateofbirth = (document.getElementById("dateofbirth").value);
-    
+     compareDate(dateofbirth);
      //verify that the cnib starts with b and it's 9 character long 
     if (dateofbirth != "")
     {
@@ -391,6 +420,10 @@ function showFonctionnaire(){
     var role = (document.getElementById("role").value).toLocaleLowerCase();
     
     
+        localStorage.roleProfession = document.getElementById("role").value;
+    
+    console.log("role: "+ document.getElementById("role").value);
+    console.log("role2: "+ localStorage.getItem("role"));
     //verify wich role is selected
     if(role == "professionnel"){
         
@@ -433,9 +466,9 @@ function validateAll(){
         count+= "- Le Prénom \n";
     } 
     
-    if(validateDateNaissance()== "false"){
+   /* if(validateDateNaissance()== "false"){
         count+= "- La Date de Naissance \n";
-    }
+    }*/
     
     if(validateLieuNaissance()== "false"){
         count+= "- Le Lieu de Naissance \n";
@@ -462,24 +495,14 @@ function validateAll(){
     }
     
    
-  /*  if(role == "Professionnel"){
-        //validate the maiden field
-        if(validateMinistere()== false)
-            count++;
-        if(validateCorps()== false)
-            count++;
-        if(validateMatricule()== false)
-            count++;
-        
-    }
-    if(sexe == "F" && validateMaiden()== false){
-            count++;
-    }*/
-    
     
      if(count != "Veuillez revoir les champs suivants: \n"){
          document.getElementById("userregisterModal").click();
-        alert(count);
+        
+    document.getElementById("messageErreur").innerHTML = count;
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
         return false;
     }else{
         var message ="";
@@ -493,8 +516,11 @@ function validateAll(){
      }
         
         if(message != ""){
-         document.getElementById("userregisterModal").click();
-            alert(message);
+            document.getElementById("userregisterModal").click();
+            document.getElementById("messageErreur").innerHTML = message;
+            jQuery(document).ready(function ($) {
+                $('#errorMessages').modal('show');
+            });
             return false;
     }
     }
@@ -532,7 +558,6 @@ function validateAll(){
         localStorage.address = document.getElementById("address").value;
         localStorage.email = document.getElementById("email").value;
         localStorage.sex = document.getElementById("sex").value;
-        localStorage.role = document.getElementById("role").value;
         localStorage.cnibnumber = document.getElementById("cnibnumber").value;
         localStorage.cnibplaceofissue = document.getElementById("cnibplaceofissue").value;
         localStorage.cnibdateissue = document.getElementById("cnibdateissue").value;
@@ -543,7 +568,10 @@ function validateAll(){
         //création du compte
         signUp();
     }else{
-        alert("Veuillez adhérer aux Conditions d'Utilisations!");
+        document.getElementById("messageErreur").innerHTML = "Veuillez adhérer aux Conditions d'Utilisations!";
+        jQuery(document).ready(function ($) {
+            $('#errorMessages').modal('show');
+        });
     }
     
 }
@@ -616,13 +644,20 @@ function validateOTPTelephone(){
         localStorage.OTPTelephone = "+226"+ telephone;
         return true;
     }
-    //setting the textfield as red if there's an error
-   alert("Entrez un numéro commençant par 226")  // this adds the error class
+    
+    document.getElementById("messageErreur").innerHTML = "Entrez un numéro commençant par 226";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
    return (false);
 }
 //==========================================================================================================================================
 function accountCreated(){
-    alert("Vous êtes connecté.")
+    
+    document.getElementById("messageErreur").innerHTML = "Vous êtes connecté.";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
 }
 //==========================================================================================================================================
 //validate the telephone as the user is inputing it 
@@ -641,7 +676,12 @@ function validateTelephoneSignIn(){
     }
     //setting the textfield as red if there's an error
     document.getElementById("usernameDiv").className = document.getElementById("usernameDiv").className + " has-error";  // this adds the error class
-    alert("Entrez un numéro dans les formats suivants:\n 22670707070 \n ou \n 70707070");
+        
+    document.getElementById("messageErreur").innerHTML = "Entrez un numéro dans les formats suivants:\n 22670707070 \n ou \n 70707070";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
+    
    return (false);
 }
 //==========================================================================================================================================
@@ -670,7 +710,11 @@ span.onclick = function() {
 //==========================================================================================================================================
 //validate the telephone as the user is inputing it 
 function help(){
-   alert("Veuillez contacter le centre d'aide aux numéros suivants:\n (226)01 16 05 05 \n (226)07 83 45 45 \n (226)01 16 12 12");
+    
+    document.getElementById("messageErreur").innerHTML = "Veuillez contacter le centre d'aide aux numéros suivants:\n (226)01 16 05 05 \n (226)07 83 45 45 \n (226)01 16 12 12";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
 }
 //==========================================================================================================================================
 //validate the telephone as the user is inputing it 
@@ -682,8 +726,11 @@ function paymentMethod(){
        document.getElementById("telephoneButton").style.display = "none";
        
        document.getElementById("telephoneTitle").style.display = "block";
-  document.getElementById("numeroTitle").style.display = "block";
+       document.getElementById("numeroTitle").style.display = "block";
         document.getElementById("resendNumber").style.display = "none";
+       
+       document.getElementById("verificationTitle").style.display = "block";
+       document.getElementById("payButton").style.display = "block";
        pinVerification();
        
    }else if(document.getElementById("paySelection").value == "MC"){
@@ -732,13 +779,19 @@ function paymentOnload() {
     document.getElementById("payTitleDiv").appendChild(extraTab);
     document.getElementById("payTitleDiv").appendChild(payTitle);
     document.getElementById("payTitleDiv").appendChild(payPTitle);
+    
+        document.getElementById("messageErreur").innerHTML = "Le payement Mobicash est présentement non-disponible, veuillez utiliser Orange. Merci.";
+        jQuery(document).ready(function ($) {
+            $('#errorMessages').modal('show');
+        });
+    
+    
 }
 //==========================================================================================================================================
-
 function pinVerification(){
     
     
-       document.getElementById("pinTitle").style.display = "none";
+       document.getElementById("pinTitle").style.display = "block";
        document.getElementById("payButton").style.display = "block";
     
     if(document.getElementById("paySelection").value == "MC"){
@@ -750,5 +803,187 @@ function pinVerification(){
         document.getElementById("resendNumber").style.display = "block";
        document.getElementById("payButton").disabled = false;
     }
+}
+//==========================================================================================================================================
+function validateAge(){
+    
+    var enteredDate = document.getElementById('dateofbirth').value;
+  // Below one is the single line logic to calculate the no. of years...
+  var years = new Date(new Date() - new Date(enteredDate)).getFullYear() - 1970;
+  //console.log(years);
+    
+ if(years < 37){
+     
+     if(document.getElementById('role').value == "Direct"){
+         document.getElementById("messageErreur").innerHTML = "Vous devez être âgé de 18 ans minimum et de 37 ans maximum au 31 décembre de l’année en cours.";
+     }else  if(document.getElementById('role').value == "Professionnel"){
+         document.getElementById("messageErreur").innerHTML = "Vous devez être âgé de 18 ans minimum et de 47 ans maximum au 31 décembre de l’année en cours.";
+     }
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+    });
+ }
+
+    
+}
+//==========================================================================================================================================
+function validateAgeCandidat(){
+    
+    var enteredDate = document.getElementById('dateofbirth').value;
+    
+    console.log("new date 4 "+enteredDate);
+    
+    
+    var dAge = enteredDate.substring(0, 2);
+    var mAge = enteredDate.substring(3, 5);
+    var YAge = enteredDate.substring(6);
+    
+    //reverting the french date to english
+    enteredDate = mAge+"-"+dAge+"-"+YAge;
+  // Below one is the single line logic to calculate the no. of years...
+  var years =Math.abs(new Date().getFullYear() -new Date(enteredDate).getFullYear() );
+ // console.log("new date 1 "+new Date());
+ //   console.log("new date 2 "+new Date(enteredDate));
+  //  console.log("new date 3 "+new Date(new Date() - new Date(enteredDate)) );
+    
+   // console.log("new date 4 "+enteredDate);
+    
+    
+    
+ if(new Date(enteredDate) == "Invalid Date"){
+     
+     document.getElementById("messageErreur").innerHTML = "La date entré est invalide.";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+        document.getElementById('dateofbirth').value = "";
+    });
+ }else if(((years > 37 || years < 18) && (document.getElementById('role').value == "Direct")) ){
+     
+    document.getElementById("messageErreur").innerHTML = "Vous devez être âgé de 18 ans minimum et de 37 ans maximum au 31 décembre de l’année en cours.";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+        document.getElementById('dateofbirth').value = "";
+    });
+ }else if((years > 47 || years < 18) && (document.getElementById('role').value == "Professionnel")){
+     
+    document.getElementById("messageErreur").innerHTML = "Vous devez être âgé de 18 ans minimum et de 47 ans maximum au 31 décembre de l’année en cours.";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+        document.getElementById('dateofbirth').value = "";
+    });
+ }   //console.log(years);
+}
+//==========================================================================================================================================
+function validateCNIBDate(){
+    
+    var enteredDate = document.getElementById('cnibdateissue').value;
+    var enteredDate2 = document.getElementById('cnibvaliduntil').value;
+    
+   // console.log("new date 1 "+enteredDate);
+  //  console.log("new date 2 "+enteredDate2);
+    
+    var issueD = enteredDate.substring(0, 2);
+    var issueM = enteredDate.substring(3, 5);
+    var issueY = enteredDate.substring(6);
+    
+    var endD = enteredDate2.substring(0, 2);
+    var endM = enteredDate2.substring(3, 5);
+    var endY = enteredDate2.substring(6);
+    
+    //reverting the french date to english
+    enteredDate = issueM+"-"+issueD+"-"+issueY;
+    
+    //reverting the french date to english
+    enteredDate2 = endM+"-"+endD+"-"+endY;
+    
+  // Below one is the single line logic to calculate the no. of years...
+  var years =Math.abs(new Date(enteredDate).getFullYear() -new Date(enteredDate2).getFullYear() );
+    
+    if(years  <= 0) {
+    document.getElementById("messageErreur").innerHTML = "Vérifiez les dates de CNIB, les dates fournies sont trop proches.";
+    jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('show');
+        document.getElementById('dateofbirth').value = "";
+    });
+ }  
+   // console.log("new date 3 "+enteredDate);
+   // console.log("new date 4 "+enteredDate2);
+   // console.log(years);
+}
+//==========================================================================================================================================
+function closeModal(){
+    
+             jQuery(document).ready(function ($) {
+        $('#errorMessages').modal('hide');
+    });
+}
+//==========================================================================================================================================
+function validateDocuments(){
+    
+    if(document.getElementById("").value == "CNIB" || document.getElementById("").value == "Attestation" || document.getElementById("").value == "Passeport" || document.getElementById("").value == "Diplome"){
+        
+       document.getElementById("nReference").style.display = "block";
+        
+       document.getElementById("dDelivrance").style.display = "block";
+        
+       document.getElementById("dEcheance").style.display = "block";
+    }
+}
+//==========================================================================================================================================
+function importDocuments(){
+    
+    setUser();
+    
+    document.getElementById("nReference").style.display = "none";
+        
+    document.getElementById("dDelivrance").style.display = "none";
+        
+    document.getElementById("dEcheance").style.display = "none";
+        
+    document.getElementById("pDelivrance").style.display = "none";
+    
+}
+//==========================================================================================================================================
+function switchDocuments(){
+    
+    if(document.getElementById("typeDocument").value == "CNIB" || document.getElementById("typeDocument").value == "Attestation" || document.getElementById("typeDocument").value == "Passeport"){
+        
+       document.getElementById("nReference").style.display = "block";
+        
+       document.getElementById("dDelivrance").style.display = "block";
+        
+       document.getElementById("dEcheance").style.display = "block";
+        
+      document.getElementById("pDelivrance").style.display = "block";
+        
+    }else if( document.getElementById("typeDocument").value == "Diplome"){
+        
+       document.getElementById("nReference").style.display = "block";
+        
+       document.getElementById("dDelivrance").style.display = "block";
+        
+       document.getElementById("dEcheance").style.display = "none";
+        
+      document.getElementById("pDelivrance").style.display = "block";
+        
+    }else{
+        document.getElementById("nReference").style.display = "none";
+        
+       document.getElementById("dDelivrance").style.display = "none";
+        
+       document.getElementById("dEcheance").style.display = "none";
+        
+        document.getElementById("pDelivrance").style.display = "block";
+    }
+}
+//==========================================================================================================================================
+function printPageArea(){
+    var doc = new jsPDF();
+doc.text(10, 10, 'Hello world!');
+doc.save('hello-world.pdf');
+}
+//==========================================================================================================================================
+function redirect() {
+        window.location.href = "econcours.gov.bf";
 }
 //==========================================================================================================================================
