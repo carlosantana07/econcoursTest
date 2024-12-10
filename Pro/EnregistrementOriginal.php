@@ -104,7 +104,7 @@
 								                <div class="col-sm-8" id="roles">
 									               <div class="form-control-flat">
 										              <select class="user_role" id="role" name="role" required onchange="showFonctionnaire()">
-                                                        <option value="Direct">Direct</option>
+                                                        <option value="Professionnel">Professionnel</option>
 										              </select>
 										              <i class="fa fa-caret-down"></i>
 									               </div>
@@ -140,6 +140,24 @@
 										    	<input type="text" class="form-control"  id="maidenname" value="" name="maidenname" placeholder="Nom de Jeune fille"  onblur="validateMaiden()" disabled >
 										    </div>
 										</div>
+										<div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Matricule</label>
+											<div class="col-sm-8" id="matriculeDiv">
+										    	<input type="text" class="form-control"  id="matricule" value="" name="matricule" placeholder="Matricule" >
+										    </div>
+										</div> 
+										<div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Ministère</label>
+											<div class="col-sm-8" id="ministry">
+										    	<input type="text" class="form-control"  id="ministere" value="" name="ministere" placeholder="Ministère"  >
+										    </div>
+										</div>
+										<div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Emploi</label>
+											<div class="col-sm-8" id="corp">
+										    	<input type="text" class="form-control" id="corps" value="" name="corps" placeholder="Corps"  >
+										    </div>
+										</div>
 								    </div>
                                     
 									<div class="col-sm-6">
@@ -171,19 +189,33 @@
                                                 <small class="help-block" style="color:red" class="col-sm-1">Confirmer: 70707070</small>
 										    </div>
 										</div>
+										<div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Email</label>
+											<div class="col-sm-8" id="emailDiv">
+										    	<input type="email" class="form-control"  id="email" value="" name="email" placeholder="Adresse Mail" >
+                                                <small class="help-block" style="color:red" class="col-sm-1">Ex: test@gmail.com</small>
+										    </div>
+										</div>
+                                        <div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Confirmer l'Email</label>
+											<div class="col-sm-8" id="emailDiv_confirm">
+										    	<input type="email" class="form-control"  id="email_confirm" value="" name="email_confirm" placeholder="adresse Mail" onblur="validateEmailConfirm()">
+                                                <small class="help-block" style="color:red" class="col-sm-1">Confirmer: test@gmail.com</small>
+										    </div>
+										</div>
 									</div>
 								</div>
 							</form>
                             <hr/>
 							<div class="form-title">
-								<h3>CNIB</h3>
+								<h3>CNIB OU PASSEPORT</h3>
 							</div>
                             <form class="form-horizontal" enctype="multipart/form-data">
 								<div class="candidate-profile-form row">
 									<div class="col-sm-6">
 										<div class="form-group">
 
-											<label for="name" class="col-sm-4 control-label">N°CNIB</label>
+											<label for="name" class="col-sm-4 control-label">N°CNIB OU N°PASSEPORT</label>
 
 											<div class="col-sm-8" id="cnib">
 										    	<input type="text" class="form-control" required id="cnibnumber" value="" name="cnibnumber" placeholder="">
@@ -192,7 +224,7 @@
 										</div>
                                         <div class="form-group">
 
-											<label for="name" class="col-sm-4 control-label">Confirmer N°CNIB</label>
+											<label for="name" class="col-sm-4 control-label">Confirmer N°CNIB OU N°PASSEPORT</label>
 											<div class="col-sm-8" id="cnibconfirm">
 										    	<input type="text" class="form-control" required id="cnibnumber_confirm" value="" name="cnibnumber_confirm" placeholder="">
                                                 <small class="help-block" style="color:red" class="col-sm-1">Confirmer: B12345678</small>

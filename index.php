@@ -80,7 +80,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="noo-bottom-bar-content">
-										© 2024 Ministère de la Fonction Publique , du Travail et de la Protection Sociale | <a href="User_accecptance.html" style="color:White">Conditions d'utilisation</a>
+										© 2024 Ministère de la Fonction Publique , du Travail et de la Protection Sociale | <a href="User_accecptance.php" style="color:White">Conditions d'utilisation</a>
 									</div>
 								</div>
 							</div>

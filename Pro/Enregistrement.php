@@ -3,14 +3,16 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        
 		<link rel="shortcut icon" href="images/gn.png"/>
-		<title>Acceuil | Econcours</title>
+		<title>Enregistrement | Econcours</title>
 
-		<link rel='stylesheet' href='css/style2.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/custom.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/jquery.datetimepicker.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/chosen.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='css/docs2.css' type='text/css' media='all'/>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,7 +21,7 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 	</head>
-	<body onload="setOTPTelephone()">
+	<body onload="saveProfil()">
 		<div class="site">
 			<header class="noo-header" id="noo-header">
 				<div class="navbar-wrapper">
@@ -67,12 +69,12 @@
 										<a href="faq.php">Aide</a>
 									</li>
 									<li class="nav-item-member-profile login-link align-center">
-										<a href="Sign_In.php" class="member-links member-login-link" id="profil">
-											<i class="fa fa-sign-in" ></i>&nbsp;Mon Compte
+										<a href="Sign_In.php" class="member-links member-login-link">
+											<i class="fa fa-sign-in"></i>&nbsp;Mon Compte
 										</a>
 									</li>
-									<li class="nav-item-member-profile register-link">
-										<a class="member-links member-register-link" href="Enregistrement.php">
+									<li class="nav-item-member-profile register-link current-menu-item " >
+										<a class="member-links member-register-link" href="Enregistrement.php" id="profil">
 											<i class="fa fa-key"></i>&nbsp;Nouveau Compte
 										</a>
 									</li>
@@ -83,90 +85,45 @@
 					</div>  
 				</div>
 			</header>
-			<div class="container-wrap">
-				<div class="main-content container-fullwidth">
+				<div class="main-content container-boxed max offset">
+                     <div class="section-title">
+                    <h2>Création de Compte</h2>
+                         
+                </div>
 					<div class="row">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
 						<div class="noo-main col-md-12">
-								<div class="col-md-12">
-                                        
-                                        <div class="job-search-info text-center">
-                                            <br>
-												<h3 class="search-main-title">Validation du numéro de téléphone</h3>
-												<p class="search-top-title">Cette étape est une période de validation vous permettant de valider votre numéro de téléphone.</p>
-											</div>
-											<div class="noo-step-icon">
-												<ul class="noo-step-icon-3">
-													<li>
-														<span class="noo-step-icon-item">
-															<a >
-																<span class="fa fa-phone noo-step-icon-class"></span>
-																<span class="noo-step-icon-otp">
-																	1.Validez votre numéro de téléphone (226)
-																</span>
-															</a>
-														</span>
-													</li>
-													<li>
-														<span class="noo-step-icon-item">
-															<a >
-																<span class="fa fa-key noo-step-icon-class"></span>
-																<span class="noo-step-icon-otp">
-																	2.Rentrez la clé de connexion reçu par SMS
-																</span>
-															</a>
-														</span>
-													</li>
-													<li>
-														<span class="noo-step-icon-item">
-															<a >
-																<span class="fa fa-user  noo-step-icon-class"></span>
-																<span class="noo-step-icon-otp">
-																	3. Connexion à votre compte
-																</span>
-															</a>
-														</span>
-													</li>
-												</ul>
-											</div>
-										</div>
-                            <div class="row ">
-								<div class="col-md-12 ">			
-                                         <div class="container new-login-area p-otp">
-                                             <div id='sign-in' class="modal-dialog modal-member login-label">
-                                                 <div class="job-search-info text-center">
-                                            <br>
-												<h3 class="search-main-title">Recevoir une clé de connexion</h3>
-											</div>
-                                                <div class="modal-dialog modal-member login-label">
-                                                    <label for="inputnumber">Entrez votre numéro de téléphone</label>
-                                                    <input type="number" class="form-control input-edit" placeholder='Entrez le numéro' id="otptelephone" value="" onchange="validateOTPTelephone()" >
-                                                </div>
-                                                <button type="button" class="btn btn-default btn-lg btn-block  request-otp" id='request-otp' onclick="sendOTP()">Recevoir la clé</button>
-                                             </div>
-                                             
-                                             <div id='verify-otp' class="modal-dialog modal-member login-label">
-                                                 <i class="fa fa-chevron-left" aria-hidden="true" onclick="resendOTP()">Renvoyer la clé</i>
-                                                 <h3 class="request-otp-header">Vérification de la clé</h3>
-                                                 <div class="form-group login-label">
-                                                     <label for="inputnumber">Clé unique d'activation</label>
-                                                     <input type="number" class="form-control input-edit" placeholder='Entrez la clé' id="numCle">
-                                                 </div>
-                                                 <button type="button" class="btn btn-default btn-lg btn-block request-otp " onclick="validateOTP()">Vérifier</button>
-                                             </div>
-                                             <br>
-                                             <br>
-                                        </div>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-								</div>
-                                </div>
+							<div class="form-title">
+								<h3>Les inscriptions sont fermées pour l'année 2024.</h3>
+							</div>
 						</div>  
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
 					</div> 
 				</div> 
-			</div>
+			</div> 
             <footer class="colophon site-info">
 				<div class="container-full">
 					<div class="footer-more">
@@ -180,12 +137,12 @@
 							</div>
 						</div>
 					</div>
-				</div>  
-			</footer>   
-		</div>  
+                </div>
+			</footer>    
 		<a href="#" class="go-to-top hidden-print"><i class="fa fa-angle-up"></i></a>
 
 		<script type='text/javascript' src='js/jquery.js'></script>
+        <script type='text/javascript' src='js/field_verification.js'></script>
 		<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
 		<script type='text/javascript' src='js/modernizr-2.7.1.min.js'></script>
 		<script type='text/javascript' src='js/jquery.cookie.js'></script>
@@ -202,11 +159,43 @@
 		<script type='text/javascript' src='js/jquery.parallax-1.1.3.js'></script>
 		<script type='text/javascript' src='js/jquery.carouFredSel-6.2.1-packed.js'></script>
 		<script type='text/javascript' src='js/custom.js'></script>
-		<script type='text/javascript' src='js/jquery-ui.min.js'></script>
-        <script type='text/javascript' src='js/jquery.min.js'></script>
         <script type='text/javascript' src='js/field_verification.js'></script>
-        <script type='text/javascript' src='js/API.js'></script>
+		<script type='text/javascript' src='js/API.js'></script>
         
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$("#dateofbirth").datetimepicker({
+					format: 'd-m-Y',
+					timepicker: false,
+					startDate:'1900/01/01',
+					scrollMonth: false,
+					scrollTime: false,
+					scrollInput: false
+				});
+			});
+            
+			jQuery(document).ready(function($) {
+				$("#cnibdateissue").datetimepicker({
+					format: 'd-m-Y',
+					timepicker: false,
+					scrollMonth: false,
+					scrollTime: false,
+					scrollInput: false
+				});
+			});
+            
+            jQuery(document).ready(function($) {
+				$("#cnibvaliduntil").datetimepicker({
+					format: 'd-m-Y',
+					timepicker: false,
+					scrollMonth: false,
+					scrollTime: false,
+					scrollInput: false
+				});
+			});
+		</script>
+    
+    
 		<div class="memberModalRegister modal fade" id="errorMessages" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog modal-member">
 				<div class="modal-content">

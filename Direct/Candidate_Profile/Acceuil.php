@@ -3,16 +3,16 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-   
-		<link rel="shortcut icon" href="images/gn.png"/>
+        
+		<link rel="shortcut icon" href="../images/gn.png"/>
 		<title>Acceuil | Econcours</title>
 
-		<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
-		<link rel='stylesheet' href='css/custom.css' type='text/css' media='all'/>
-		<link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all'/>
-		<link rel='stylesheet' href='css/jquery.datetimepicker.css' type='text/css' media='all'/>
-		<link rel='stylesheet' href='css/chosen.css' type='text/css' media='all'/>
-        <link rel='stylesheet' href='css/docs2.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='../css/style.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='../css/custom.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='../css/font-awesome.min.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='../css/jquery.datetimepicker.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='../css/chosen.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='../css/docs2.css' type='text/css' media='all'/>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,9 +20,8 @@
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-         
 	</head>
-	<body onload="mobicashOuverture()">
+	<body onload="alertMessageUser()">
 		<div class="site">
 			<header class="noo-header" id="noo-header">
 				<div class="navbar-wrapper">
@@ -35,23 +34,21 @@
 									<i class="fa fa-bars"></i>
 								</a>
 								<a class="navbar-toggle member-navbar-toggle collapsed" data-toggle="collapse" data-target=".noo-user-navbar-collapse">
-									<i class="fa fa-user"></i>
+									<i class="fa fa-user" id="mobileUser"></i>
 								</a>
 								<a href="Acceuil.php" class="navbar-brand">
-									<img class="noo-logo-img noo-logo-normal" src="images/gn.png" alt="">
-									<img class="noo-logo-mobile-img noo-logo-normal" src="images/gn.png" alt="">
+									<img class="noo-logo-img noo-logo-normal" src="../images/gn.png" alt="">
+									<img class="noo-logo-mobile-img noo-logo-normal" src="../images/gn.png" alt="">
 								</a>
-                                
-                                    
 							</div>  
 							<nav class="collapse navbar-collapse noo-user-navbar-collapse">
 								<ul class="navbar-nav sf-menu">
-									<li>
-										<a href="Sign_In.php"><i class="fa fa-key"></i> Connexion</a>
-									</li>
-									<li>
-										<a href="Enregistrement.php"><i class="fa fa-key"></i>Nouveau Compte</a>
-									</li>
+                                    <li><a href="Profil_Candidat.php"><i class="fa fa-edit"></i>Mon Profil</a></li>
+                                    <li><a href="Candidat_Concours.php"><i class="fa fa-file-text-o"></i>Mes Concours</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="Candidat_Documents.php"><i class="fa fa-file-text-o"></i>Mes Documents</a></li>
+                                    <li><a href="import_document.php"><i class="fa fa-users"></i>Importer Documents</a></li>
+									<li><a href="#" onclick=deconnexion(); ><i class="fa fa-key"></i> Déconnexion</a></li>
 								</ul>
 							</nav>
 							<nav class="collapse navbar-collapse noo-navbar-collapse">
@@ -71,14 +68,25 @@
 									<li class="align-left">
 										<a href="faq.php">Aide</a>
 									</li>
-									<li class="nav-item-member-profile login-link align-center">
-										<a href="Sign_In.php" class="member-links member-login-link" id="profil">
-											<i class="fa fa-sign-in" ></i>&nbsp;Mon Compte
+                                    <li class="nav-item-member-profile login-link">
+										<a href="Profil_Candidat.php" class="sf-with-ul">
+											<span class="profile-name" id="profil"></span>
+											<span class="profile-avatar">
+												<img alt="" src="../images/user.jpg" height="40" width="40">
+											</span>
 										</a>
+										<ul class="sub-menu">
+											<li><a href="Profil_Candidat.php"><i class="fa fa-edit"></i>Mon Profil</a></li>
+											<li><a href="Candidat_Concours.php"><i class="fa fa-file-text-o"></i>Mes Concours</a></li>
+											<li class="divider"></li>
+											<li><a href="Candidat_Documents.php"><i class="fa fa-file-text-o"></i>Mes Documents</a></li>
+											<li><a href="import_document.php"><i class="fa fa-users"></i>Importer Documents</a></li>
+											<li><a  onclick=deconnexion(); href="#"><i class="fa fa-sign-out"></i>Déconnexion</a></li>
+										</ul>
 									</li>
-									<li class="nav-item-member-profile register-link">
-										<a class="member-links member-register-link" href="Enregistrement.php">
-											<i class="fa fa-key"></i>&nbsp;Nouveau Compte
+									<li class="nav-item-member-profile login-link align-center">
+										<a href="#" onclick=deconnexion(); class="member-links member-login-link" id="profil">
+											<i class="fa fa-sign-in" ></i>&nbsp;Déconnexion
 										</a>
 									</li>
 								</ul>
@@ -88,49 +96,47 @@
 					</div>  
 				</div>
 			</header>
-            
-            
+			<div class="container-wrap">
 				<div class="main-content container-fullwidth">
 					<div class="row">
 						<div class="noo-main col-md-12">
 							<div class="row pt-0 pb-0">
 								<div class="col-md-12">
                                     <br>
-                                    <br>
-											
-                <div class="section-title">
-                    <p class="search-top-title">Bienvenue</p>
-                    <h2>E-CONCOURS</h2>
-                    <p class="search-top-title">Le portail d'accès à la Fonction Publique.</p>
-                </div>
+                                    <br>				
+                                    <div class="section-title">
+                                        <p class="search-top-title">Bienvenue</p>
+                                        <h2>E-CONCOURS</h2>
+                                        <p class="search-top-title">Le portail d'accès à la Fonction Publique.</p>
+                                    </div>
                                     <div class="job-search-info text-center">
-									            <img class="noo-logo-img noo-logo-normal" src="images/gn.png"  height="142" width="142" alt="">
-											</div>
+                                        <img class="noo-logo-img noo-logo-normal" src="../images/gn.png"  height="142" width="142" alt="">
+                                    </div>
                                 <br>
                                 <br>
-								</div>
+                                </div>
 							</div>
-                            <div class="section-title">
-                            <!-- counter for the site visitors -->
-<a target="_blank">Nombre de visiteurs:<img src="https://www.webfreecounter.com/hit.php?id=gracfcp&nd=9&style=1" border="0" alt="visitor counter"></a>
+                            
+                            <div class="section-title"><a target="_blank">Nombre de visiteurs:</a><!-- Start of WebFreeCounter Code -->
+<a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gemfdaxa&nd=9&style=1" border="0" alt="visitor counter"></a>
+<!-- End of WebFreeCounter Code -->
 
             </div>
 							<div class="row bg-primary">
 								<div class="col-md-12">
-									<div class="row">
-										<div class="col-md-12"><div class="section-title">
+									<div class="row"><div class="section-title">
                     <h3>Comment s'inscrire?</h3>
                     <p class="search-top-title">Voici ci-dessous les étapes permettant l'inscription à un concours.</p><br>
                                             <p class="search-top-title">Selectionnez l'option 1 pour débuter.</p><br>
                                             <span href="faq.php" class="fa fa-arrow-right noo-step-icon-class"></span>
                                             <a href="faq.php"><p style="color:white">Aide?</p></a>
                 </div>
+										<div class="col-md-12">
 											<div class="noo-step-icon clearfix">
 												<ul class="noo-step-icon-3">
-                                                      
 													<li>
 														<span class="noo-step-icon-item">
-															<a href="Enregistrement.php">
+															<a onclick="accountCreated()">
 																<span class="fa fa-key noo-step-icon-class"></span>
 																<span class="noo-step-icon-title">
 																	1.Créer un compte
@@ -150,10 +156,10 @@
 													</li>
 													<li>
 														<span class="noo-step-icon-item">
-															<a href="Sign_In.php">
+															<a href="import_document.php">
 																<span class="fa fa-file-text-o noo-step-icon-class"></span>
 																<span class="noo-step-icon-title">
-																	3.Sauvegarder des documents
+																	3. Sauvegarder des documents
 																</span>
 															</a>
 														</span>
@@ -170,7 +176,7 @@
                                         <h2>Contact</h2>
                                         <p>L'équipe d'assistance est à votre écoute 7/7 de 8h à 20h.</p>
                                     </div>
-                                    <div class="contact-boxView" >
+                                    <div class="contact-boxView">
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <div class="contact-box red" >
@@ -212,7 +218,7 @@
                                                     <div class="icon-box">
                                                         <i class="fa fa-envelope"></i>
                                                     </div>
-                                                    <h4>Adresse mail</h4>
+                                                    <h4>adresse mail</h4>
                                                     <p><li>econcours@mfp.gov.bf</li></p>
                                                 </div>
                                             </div>
@@ -222,7 +228,8 @@
                             </section>                 
                         </div> 
                     </div> 
-            </div> 
+				</div> 
+			</div> 
             <footer class="colophon site-info">
 				<div class="container-full">
 					<div class="footer-more">
@@ -241,25 +248,24 @@
 		</div>  
 		<a href="#" class="go-to-top hidden-print"><i class="fa fa-angle-up"></i></a>
 
-		<script type='text/javascript' src='js/jquery.js'></script>
-		<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
-		<script type='text/javascript' src='js/modernizr-2.7.1.min.js'></script>
-		<script type='text/javascript' src='js/jquery.cookie.js'></script>
-		<script type='text/javascript' src='js/jquery.blockUI.min.js'></script>
-		<script type='text/javascript' src='js/imagesloaded.pkgd.min.js'></script>
-		<script type='text/javascript' src='js/isotope-2.0.0.min.js'></script>
-		<script type='text/javascript' src='js/jquery.touchSwipe.min.js'></script>
-		<script type='text/javascript' src='js/bootstrap.min.js'></script>
-		<script type='text/javascript' src='js/hoverIntent-r7.min.js'></script>
-		<script type='text/javascript' src='js/superfish-1.7.4.min.js'></script>
-		<script type='text/javascript' src='js/script.js'></script>
-		<script type='text/javascript' src='js/chosen.jquery.min.js'></script>
-		<script type='text/javascript' src='js/jquery.datetimepicker.js'></script>
-		<script type='text/javascript' src='js/jquery.parallax-1.1.3.js'></script>
-		<script type='text/javascript' src='js/jquery.carouFredSel-6.2.1-packed.js'></script>
-		<script type='text/javascript' src='js/custom.js'></script>
-        <script type='text/javascript' src='js/API.js'></script>
-        <script type='text/javascript' src='js/field_verification.js'></script>
+		<script type='text/javascript' src='../js/jquery.js'></script>
+		<script type='text/javascript' src='../js/jquery-migrate.min.js'></script>
+		<script type='text/javascript' src='../js/modernizr-2.7.1.min.js'></script>
+		<script type='text/javascript' src='../js/jquery.cookie.js'></script>
+		<script type='text/javascript' src='../js/jquery.blockUI.min.js'></script>
+		<script type='text/javascript' src='../js/imagesloaded.pkgd.min.js'></script>
+		<script type='text/javascript' src='../js/isotope-2.0.0.min.js'></script>
+		<script type='text/javascript' src='../js/jquery.touchSwipe.min.js'></script>
+		<script type='text/javascript' src='../js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='../js/hoverIntent-r7.min.js'></script>
+		<script type='text/javascript' src='../js/superfish-1.7.4.min.js'></script>
+		<script type='text/javascript' src='../js/script.js'></script>
+		<script type='text/javascript' src='../js/chosen.jquery.min.js'></script>
+		<script type='text/javascript' src='../js/jquery.datetimepicker.js'></script>
+		<script type='text/javascript' src='../js/jquery.parallax-1.1.3.js'></script>
+		<script type='text/javascript' src='../js/jquery.carouFredSel-6.2.1-packed.js'></script>
+		<script type='text/javascript' src='../js/custom.js'></script>
+        <script type='text/javascript' src='../js/API.js'></script>
 		<script>
 			jQuery('document').ready(function ($) {
 				$('#noo-slider-3 .sliders').carouFredSel({

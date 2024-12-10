@@ -22,7 +22,7 @@
         <![endif]-->
          
 	</head>
-	<body onload="mobicashOuverture()">
+	<body>
 		<div class="site">
 			<header class="noo-header" id="noo-header">
 				<div class="navbar-wrapper">
@@ -112,9 +112,9 @@
 							</div>
                             <div class="section-title">
                             <!-- counter for the site visitors -->
-<a target="_blank">Nombre de visiteurs:<img src="https://www.webfreecounter.com/hit.php?id=gracfcp&nd=9&style=1" border="0" alt="visitor counter"></a>
-
-            </div>
+<a target="_blank">Nombre de visiteurs:</a><!-- Start of WebFreeCounter Code -->
+<a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gemfdaxa&nd=9&style=1" border="0" alt="visitor counter"></a>
+<!-- End of WebFreeCounter Code -->
 							<div class="row bg-primary">
 								<div class="col-md-12">
 									<div class="row">

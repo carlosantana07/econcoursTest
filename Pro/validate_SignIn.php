@@ -21,7 +21,7 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 	</head>
-	<body onload="saveProfil()">
+	<body onload="reviewProfile()">
 		<div class="site">
 			<header class="noo-header" id="noo-header">
 				<div class="navbar-wrapper">
@@ -100,155 +100,151 @@
 								<div class="candidate-profile-form row">
 									<div class="col-sm-6">
                                         <div class="form-group ">
-								                <label class="col-sm-4 control-label">Type de Concours</label>
-								                <div class="col-sm-8" id="roles">
+								                <label class="col-sm-4 control-label">Type de Concours:</label>
+								                <div class="col-sm-8" >
 									               <div class="form-control-flat">
-										              <select class="user_role" id="role" name="role" required onchange="showFonctionnaire()">
-                                                        <option value="Direct">Direct</option>
-										              </select>
-										              <i class="fa fa-caret-down"></i>
+                                                        <label id="role" style="color:red" class="col-sm-4 control-label">Professionnel</label>
 									               </div>
 								                </div>
                                             </div>  
 							            <div class="form-group ">
-								                <label class="col-sm-4 control-label">Sexe</label>
+								                <label class="col-sm-4 control-label">Sexe:</label>
 								                <div class="col-sm-8">
 									               <div class="form-control-flat">
-										              <select class="user_role" id="sex" name="sex" required onchange="showMaiden()">
-											             <option value="M">Masculin</option>
-                                                        <option value="F">Féminin</option>
-										              </select>
-										              <i class="fa fa-caret-down"></i>
+                                                        <label id="sex" style="color:red"  class="col-sm-4 control-label"></label>
 									               </div>
 								                </div>
                                             </div>
                                         <div class="form-group">
-											<label for="name" class="col-sm-4 control-label">Nom</label>
+											<label for="name" class="col-sm-4 control-label">Nom:</label>
 											<div class="col-sm-8" id="nom">
-										    	<input type="text" class="form-control"  id="lastname" value="" name="lastname" placeholder="Nom de Famille" >
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label"  id="lastname">  </label>
 										    </div>
 										</div>
 										<div class="form-group">
-											<label for="name" class="col-sm-4 control-label">Prénom (S)</label>
+											<label for="name" class="col-sm-4 control-label">Prénom (S):</label>
 											<div class="col-sm-8" id="prenom">
-										    	<input type="text" class="form-control"  id="firstname" value="" name="firstname" placeholder="Prénom" >
+										    	<label type="text" style="color:red"  style="color:red"  class="col-sm-4 control-label"  id="firstname" value="" name="firstname" placeholder="Prénom">  </label>
 										    </div>
 										</div>
 										<div class="form-group">
-											<label for="name" class="col-sm-4 control-label">Nom de Jeune Fille</label>
+											<label for="name" class="col-sm-4 control-label">Nom de Jeune Fille:</label>
 											<div class="col-sm-8" id="marier">
-										    	<input type="text" class="form-control"  id="maidenname" value="" name="maidenname" placeholder="Nom de Jeune fille"  onblur="validateMaiden()" disabled >
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label"  id="maidenname" value="" name="maidenname" placeholder="Nom de Jeune fille">  </label>
+										    </div>
+										</div>
+										<div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Matricule:</label>
+											<div class="col-sm-8" id="matriculeDiv">
+										    	<label type="text" style="color:red" class="col-sm-4 control-label"  id="matricule" value="" name="matricule" placeholder="Matricule">  </label>
+										    </div>
+										</div> 
+										<div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Ministère:</label>
+											<div class="col-sm-8" id="ministry">
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" id="ministere" value="" name="ministere" placeholder="Ministère">  </label>
+										    </div>
+										</div>
+										<div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Emploi:</label>
+											<div class="col-sm-8" id="corp">
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" id="corps" value="" name="corps" placeholder="Corps">  </label>
 										    </div>
 										</div>
 								    </div>
                                     
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label for="birthday" class="col-sm-4 control-label">Date de Naissance</label>
+											<label for="birthday" class="col-sm-4 control-label">Date de Naissance:</label>
 											<div class="col-sm-8" id="naissance">
-										    	<input type="text" class="form-control" id="dateofbirth" data-date-format="DD MMMM YYYY" value="" name="dateofbirth" placeholder="JJ-MM-AAAA">
-                                                <small class="help-block" style="color:red" class="col-sm-1">Né(e) "Vers" ou "En": 31/Décembre/ Année = XXXX</small>
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" id="dateofbirth" data-date-format="DD MMMM YYYY" value="" name="dateofbirth" placeholder="JJ-MM-AAAA">  </label>
 										    </div>
 										</div>
                                         <div class="form-group">
-											<label for="address" class="col-sm-4 control-label">Lieu de Naissance</label>
+											<label for="address" class="col-sm-4 control-label">Lieu de Naissance:</label>
 											<div class="col-sm-8" id="lieu">
-										    	<input type="text" class="form-control" id="address" value="" name="address">
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" id="address" value="" name="address">  </label>
 										    </div>
 										</div>
 										<div class="form-group">
-											<label for="phone" class="col-sm-4 control-label">Téléphone</label>
+											<label for="phone" class="col-sm-4 control-label">Téléphone:</label>
 											<div class="col-sm-8" id="telephoneDiv">
-										    	<input type="number" class="form-control" id="telephone" value="226" name="telephone" placeholder="226" onblur="validateTelephone()">
-                                                <small class="help-block" style="color:red" class="col-sm-1">Ex: 70707070</small>
+										    	<label type="number" style="color:red" class="col-sm-4 control-label" id="telephone" value="226" name="telephone" placeholder="226">  </label>
 										    </div>
 										</div>
                                         <div class="form-group">
-											<label for="phone" class="col-sm-4 control-label">Confirmer le Téléphone</label>
+											<label for="phone" class="col-sm-4 control-label">Confirmer le Téléphone:</label>
 											<div class="col-sm-8" id="telephoneDiv_confirm">
-										    	<input type="number" class="form-control" id="telephone_confirm" value="226" name="telephone_confirm" placeholder="226" 
-                                                       onblur="validateTelephoneConfirm()">
-                                                <small class="help-block" style="color:red" class="col-sm-1">Confirmer: 70707070</small>
+										    	<label type="number" style="color:red" class="col-sm-4 control-label" id="telephone_confirm" value="226" name="telephone_confirm" placeholder="226">  </label>
 										    </div>
+										</div>
+										<div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Email:</label>
+											<div class="col-sm-8" id="emailDiv">
+										    	<label type="email" style="color:red" class="col-sm-4 control-label"  id="email" value="" name="email" placeholder="Adresse Mail" >  </label>
+										    </div>
+										</div>
+                                        <div class="form-group">
+											<label for="profile-email" class="col-sm-4 control-label">Confirmer l'Email</label>
+											<div class="col-sm-8" id="emailDiv_confirm">
+										    	<label type="email" style="color:red" class="col-sm-4 control-label"  id="email_confirm" value="" name="email_confirm" placeholder="adresse Mail">  </label>
 										</div>
 									</div>
 								</div>
+						</div>  
 							</form>
                             <hr/>
 							<div class="form-title">
-								<h3>CNIB</h3>
+								<h3>CNIB OU N°PASSEPORT</h3>
 							</div>
                             <form class="form-horizontal" enctype="multipart/form-data">
 								<div class="candidate-profile-form row">
 									<div class="col-sm-6">
 										<div class="form-group">
-
-											<label for="name" class="col-sm-4 control-label">N°CNIB</label>
-
+											<label for="name" class="col-sm-4 control-label">N°CNIB OU N°PASSEPORT:</label>
 											<div class="col-sm-8" id="cnib">
-										    	<input type="text" class="form-control" required id="cnibnumber" value="" name="cnibnumber" placeholder="">
-                                                <small class="help-block" style="color:red" class="col-sm-1">Ex: B12345678</small>
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" required id="cnibnumber" value="" name="cnibnumber" placeholder="">  </label>
 										    </div>
 										</div>
                                         <div class="form-group">
-
-											<label for="name" class="col-sm-4 control-label">Confirmer N°CNIB</label>
+											<label for="name" class="col-sm-4 control-label">Confirmer N°CNIB OU N°PASSEPORT:</label>
 											<div class="col-sm-8" id="cnibconfirm">
-										    	<input type="text" class="form-control" required id="cnibnumber_confirm" value="" name="cnibnumber_confirm" placeholder="">
-                                                <small class="help-block" style="color:red" class="col-sm-1">Confirmer: B12345678</small>
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" required id="cnibnumber_confirm" value="" name="cnibnumber_confirm" placeholder="">  </label>
 										    </div>
 										</div>
 										<div class="form-group">
-											<label for="birthday" class="col-sm-4 control-label">Délivrée le</label>
+											<label for="birthday" class="col-sm-4 control-label">Délivrée le:</label>
 											<div class="col-sm-8" id="cnibdate">
-										    	<input type="text" class="form-control" id="cnibdateissue" value="" name="cnibdateissue" placeholder="JJ-MM-AAAA">
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" id="cnibdateissue" value="" name="cnibdateissue" placeholder="JJ-MM-AAAA">  </label>
 										    </div>
 										</div>
 								    </div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label for="birthday" class="col-sm-4 control-label">Expire le</label>
+											<label for="birthday" class="col-sm-4 control-label">Expire le:</label>
 											<div class="col-sm-8" id="cnibvalide">
-										    	<input type="text" class="form-control" id="cnibvaliduntil" value="" name="cnibvaliduntil" placeholder="JJ-MM-AAAA">
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" id="cnibvaliduntil" value="" name="cnibvaliduntil" placeholder="JJ-MM-AAAA">  </label>
 										    </div>
 										</div>
                                         <div class="form-group">
-											<label for="name" class="col-sm-4 control-label">Lieu de Délivrance</label>
+											<label for="name" class="col-sm-4 control-label">Lieu de Délivrance:</label>
 											<div class="col-sm-8" id="cnibpays">
-										    	<input type="text" class="form-control" required id="cnibplaceofissue" value="" name="cnibplaceofissue" placeholder="Pays de delivrance">
+										    	<label type="text" style="color:red"  class="col-sm-4 control-label" required id="cnibplaceofissue" value="" name="cnibplaceofissue" placeholder="Pays de delivrance">  </label>
 										    </div>
 										</div>
 									</div>
 								</div>
 							</form>
 							<hr/>
-							<div class="form-title">
-								<h3>Mot de Passe</h3>
-							</div>
-							<form class="form-horizontal">
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="form-group">
-											<label for="new_pass" class="col-sm-3 control-label">Nouveau Mot de Passe</label>
-											<div class="col-sm-8" id="pass">
-										    	<input type="password" class="form-control" required id="new_pass" value="" name="new_pass">
-										    </div>
-										</div>
-										<div class="form-group">
-											<label for="new_pass_confirm" class="col-sm-3 control-label">Confirmer le Nouveau Mot de Passe</label>
-											<div class="col-sm-8" id="pass_confirm">
-										    	<input type="password" class="form-control" required id="new_pass_confirm" value="" name="new_pass_confirm">
-										    </div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<button type="reset" class="btn btn-primary"  onclick="validateAll()" >Créer mon compte</button>
-								</div>
-							</form>
-							<hr/>
-						</div>  
 					</div> 
+                        <div class="noo-main col-md-8" >   
+                            <div class="job-action">
+                                <a class="btn btn-primary" onclick="window.history.back()">Modifier mes informations</a>
+                                <a class="btn btn-primary" href="User_accecptance_SignIn.php">Continuer l'enregistrement</a>
+                            </div>
+        
+                        </div>
+                        
 				</div> 
 			</div> 
             <footer class="colophon site-info">
@@ -265,7 +261,8 @@
 						</div>
 					</div>
                 </div>
-			</footer>    
+			</footer>      
+		</div>  
 		<a href="#" class="go-to-top hidden-print"><i class="fa fa-angle-up"></i></a>
 
 		<script type='text/javascript' src='js/jquery.js'></script>
@@ -321,30 +318,6 @@
 				});
 			});
 		</script>
-    
-    
-		<div class="memberModalRegister modal fade" id="errorMessages" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-member">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close" id="buttonModal">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<h4 class="modal-title">Alerte</h4>
-					</div>
-					<div class="modal-body">
-						<form class="noo-ajax-register-form form-horizontal container-boxed2">   
-                        <div class="job-desc">
-                        <p id="messageErreur">Erreur</p>
-                            <br>
-							<div class="form-group text-center">
-                                <button type="reset" class="btn btn-primary" onclick="closeModal()">Ok</button>
-							</div>
-                            </div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</body>
 </html>

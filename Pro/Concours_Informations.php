@@ -3,10 +3,11 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        
 		<link rel="shortcut icon" href="images/gn.png"/>
-		<title>Acceuil | Econcours</title>
+		<title>Concours | Econcours</title>
 
-		<link rel='stylesheet' href='css/style2.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/custom.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/jquery.datetimepicker.css' type='text/css' media='all'/>
@@ -19,7 +20,7 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 	</head>
-	<body onload="setOTPTelephone()">
+	<body onload="loadConcoursInfoAcceuil()">
 		<div class="site">
 			<header class="noo-header" id="noo-header">
 				<div class="navbar-wrapper">
@@ -51,7 +52,7 @@
 							</nav>
 							<nav class="collapse navbar-collapse noo-navbar-collapse">
 								<ul class="navbar-nav sf-menu">
-									<li class="align-left">
+									<li class="current-menu-item align-left">
 										<a href="Acceuil.php">Accueil</a>
 									</li>
 									<li class="align-left">
@@ -78,95 +79,34 @@
 									</li>
 								</ul>
 							</nav> 
-                            <a><br>MFPTPS</a>  
+                            <a><br>MFPTPS</a>   
 						</div>  
 					</div>  
 				</div>
 			</header>
-			<div class="container-wrap">
-				<div class="main-content container-fullwidth">
-					<div class="row">
-						<div class="noo-main col-md-12">
-								<div class="col-md-12">
-                                        
-                                        <div class="job-search-info text-center">
-                                            <br>
-												<h3 class="search-main-title">Validation du numéro de téléphone</h3>
-												<p class="search-top-title">Cette étape est une période de validation vous permettant de valider votre numéro de téléphone.</p>
-											</div>
-											<div class="noo-step-icon">
-												<ul class="noo-step-icon-3">
-													<li>
-														<span class="noo-step-icon-item">
-															<a >
-																<span class="fa fa-phone noo-step-icon-class"></span>
-																<span class="noo-step-icon-otp">
-																	1.Validez votre numéro de téléphone (226)
-																</span>
-															</a>
-														</span>
-													</li>
-													<li>
-														<span class="noo-step-icon-item">
-															<a >
-																<span class="fa fa-key noo-step-icon-class"></span>
-																<span class="noo-step-icon-otp">
-																	2.Rentrez la clé de connexion reçu par SMS
-																</span>
-															</a>
-														</span>
-													</li>
-													<li>
-														<span class="noo-step-icon-item">
-															<a >
-																<span class="fa fa-user  noo-step-icon-class"></span>
-																<span class="noo-step-icon-otp">
-																	3. Connexion à votre compte
-																</span>
-															</a>
-														</span>
-													</li>
-												</ul>
-											</div>
-										</div>
-                            <div class="row ">
-								<div class="col-md-12 ">			
-                                         <div class="container new-login-area p-otp">
-                                             <div id='sign-in' class="modal-dialog modal-member login-label">
-                                                 <div class="job-search-info text-center">
-                                            <br>
-												<h3 class="search-main-title">Recevoir une clé de connexion</h3>
-											</div>
-                                                <div class="modal-dialog modal-member login-label">
-                                                    <label for="inputnumber">Entrez votre numéro de téléphone</label>
-                                                    <input type="number" class="form-control input-edit" placeholder='Entrez le numéro' id="otptelephone" value="" onchange="validateOTPTelephone()" >
-                                                </div>
-                                                <button type="button" class="btn btn-default btn-lg btn-block  request-otp" id='request-otp' onclick="sendOTP()">Recevoir la clé</button>
-                                             </div>
-                                             
-                                             <div id='verify-otp' class="modal-dialog modal-member login-label">
-                                                 <i class="fa fa-chevron-left" aria-hidden="true" onclick="resendOTP()">Renvoyer la clé</i>
-                                                 <h3 class="request-otp-header">Vérification de la clé</h3>
-                                                 <div class="form-group login-label">
-                                                     <label for="inputnumber">Clé unique d'activation</label>
-                                                     <input type="number" class="form-control input-edit" placeholder='Entrez la clé' id="numCle">
-                                                 </div>
-                                                 <button type="button" class="btn btn-default btn-lg btn-block request-otp " onclick="validateOTP()">Vérifier</button>
-                                             </div>
-                                             <br>
-                                             <br>
-                                        </div>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-								</div>
-                                </div>
-						</div>  
-					</div> 
+				<div class="container-boxed max parallax-content" id="row">
+                    
+                    
+				</div>
+            
+            
+        <div class="container-boxed max parallax-content" id="row">    
+        <canvas class="canvas2" id="pdf_canvas"></canvas>
+            <br>
+                <button class="btn btn-primary" id="prev_page">Précédente</button>
+                <span id="current_page_num"></span>
+                    de
+                <span id="total_page_num"></span>
+                <button class="btn btn-primary" id="next_page">Suivante</button>
+            </div>
+            
+            <div class="container-boxed2">
+				<div class="container-boxed max offset main-content single-noo_job">
+					<div class="row" id="apply">
+					</div>  
 				</div> 
-			</div>
+                
+            </div>
             <footer class="colophon site-info">
 				<div class="container-full">
 					<div class="footer-more">
@@ -181,11 +121,13 @@
 						</div>
 					</div>
 				</div>  
-			</footer>   
+			</footer>     
 		</div>  
 		<a href="#" class="go-to-top hidden-print"><i class="fa fa-angle-up"></i></a>
 
 		<script type='text/javascript' src='js/jquery.js'></script>
+        <script type='text/javascript' src='js/API.js'></script>
+        <script type='text/javascript' src='js/field_verification.js'></script>
 		<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
 		<script type='text/javascript' src='js/modernizr-2.7.1.min.js'></script>
 		<script type='text/javascript' src='js/jquery.cookie.js'></script>
@@ -202,11 +144,10 @@
 		<script type='text/javascript' src='js/jquery.parallax-1.1.3.js'></script>
 		<script type='text/javascript' src='js/jquery.carouFredSel-6.2.1-packed.js'></script>
 		<script type='text/javascript' src='js/custom.js'></script>
-		<script type='text/javascript' src='js/jquery-ui.min.js'></script>
-        <script type='text/javascript' src='js/jquery.min.js'></script>
-        <script type='text/javascript' src='js/field_verification.js'></script>
-        <script type='text/javascript' src='js/API.js'></script>
-        
+        <script src="js/pdf.js" charset="utf-8"></script>
+        <script src="js/pdfViewer.js" charset="utf-8"></script>
+    
+    
 		<div class="memberModalRegister modal fade" id="errorMessages" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog modal-member">
 				<div class="modal-content">

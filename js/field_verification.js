@@ -6,7 +6,7 @@ function loginLoading() {
     localStorage.username = "+"+document.getElementById("username").value;
     localStorage.password = document.getElementById("password").value;  
     
-    window.location.href = "Loading.html";
+    window.location.href = "Loading.php";
     
     login();
         
@@ -552,7 +552,7 @@ function validateAll(){
         localStorage.password = document.getElementById("new_pass").value;
         localStorage.password_confirm = document.getElementById("new_pass_confirm").value;
     
-        window.location.href = "validate_SignIn.html"
+        window.location.href = "validate_SignIn.php"
     
 }
 //==========================================================================================================================================
@@ -982,9 +982,9 @@ function alertMessage(){
 }
 //==========================================================================================================================================
 function redirectPro(){
-    window.location.href="Pro/acceuil.html"
+    window.location.href="Pro/acceuil.php"
 }
 //==========================================================================================================================================
 function redirectDirect(){
-    window.location.href="Direct/acceuil.html"
+    window.location.href="Direct/acceuil.php"
 }

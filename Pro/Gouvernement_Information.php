@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         
 		<link rel="shortcut icon" href="images/gn.png"/>
-		<title>Concours | Econcours</title>
+		<title>Ministères | Econcours</title>
 
 		<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/custom.css' type='text/css' media='all'/>
@@ -13,7 +13,6 @@
 		<link rel='stylesheet' href='css/jquery.datetimepicker.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='css/chosen.css' type='text/css' media='all'/>
         <link href="css/loader.css" rel="stylesheet"><!--  loader css -->
-        <link href="css/docs2.css" rel="stylesheet"><!--  template structure css -->
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,7 +21,7 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 	</head>
-	<body  onload="signUp()">
+	<body>
     	<div id="loader-wrapper">
 			<div id="loader"></div>
 			<div class="loader-section section-left"></div>
@@ -65,7 +64,7 @@
 									<li class="align-left">
 										<a href="Concours.php">Concours</a>
 									</li>
-									<li class="align-left">
+									<li class="current-menu-item align-left">
 										<a href="Gouvernement.php">Ministères</a>
 									</li>
 									<li class="align-left">
@@ -75,29 +74,118 @@
 										<a href="faq.php">Aide</a>
 									</li>
 									<li class="nav-item-member-profile login-link align-center">
-										<a href="Sign_In.php" class="member-links member-login-link" id="profil">
+										<a href="Sign_In.php" class="member-links member-login-link">
 											<i class="fa fa-sign-in"></i>&nbsp;Mon Compte
 										</a>
 									</li>
-									<li class="nav-item-member-profile register-link">
+							<!--		<li class="nav-item-member-profile register-link">
 										<a class="member-links member-register-link" href="Enregistrement.php">
 											<i class="fa fa-key"></i>&nbsp;Nouveau Compte
 										</a>
-									</li>
+									</li>-->
 								</ul>
 							</nav> 
-                            <a><br>MFPTPS</a>   
+                            <a><br>MFPTPS</a>  
 						</div>  
 					</div>  
 				</div>
 			</header>
+			<div class="container-wrap">
+				<div class="container-boxed max offset main-content single-noo_job">
+					<div class="row">
+                        
+						<div class="noo-sidebar col-md-4">
+							<div class="noo-sidebar-wrap">
+								<div class="widget widget_noo_advanced_search_widget">
+									<h4 class="widget-title">Recherche</h4>
+									<form class="widget-advanced-search">
+										<div class="form-group">
+											<label class="sr-only" for="search-keyword">Rechercher un concours</label>
+											<input type="text" class="form-control" id="search" name="s" placeholder="Rechercher un concours" value="" onkeyup="comboSearchMinistere()"/>
+										</div>
+										<div class="form-group">
+											<label class="h5">Niveau d'Étude</label>
+											<div class="advance-search-form-control">
+												<select name="category" class="form-control-chosen form-control" id="search-academic" onchange="comboSearchMinistere()">
+													<option class="text-placeholder" value="">Choisir un Niveau d'Étude</option>
+                                                    <option value="BEPC">CEPE</option>
+                                                    <option value="BEPC">BEPC</option>
+                                                    <option value="Baccalaureat">Baccalaureat</option>
+                                                    <option value="DEUG II">DEUG II</option>
+                                                    <option value="Licence">Licence</option>
+                                                    <option value="Licence LMD">Licence LMD</option>
+                                                    <option value="Master">Maitrise / Master</option>
+                                                    <option value="Doctorat">Doctorat</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="h5">Niveau Cycle</label>
+											<div class="advance-search-form-control">
+												<select name="category" class="form-control-chosen form-control" id="search-cycle" onchange="comboSearchMinistere()">
+													<option class="text-placeholder" value="">Choisir un Cycle</option>
+                                                    <option value="Cycle P">Cycle P</option>
+                                                    <option value="Cycle A">Cycle A</option>
+                                                    <option value="Cycle B">Cycle B</option>
+                                                    <option value="Cycle C">Cycle C</option>
+                                                    <option value="Cycle D">Cycle D</option>
+                                                    <option value="Cycle E">Cycle E</option>
+												</select>
+											</div>
+										</div>
+                                        <button type="reset" class="btn btn-primary btn-search-submit" onclick="clearSearch()">Nouvelle Recherche</button>
+									</form>
+								</div>
+							</div>
+						</div> 
+						<div class="noo-main col-md-8">
+							<div class="job-listing">
+								<div class="jobs posts-loop">
+									<div class="posts-loop-title" id="titre">
+									</div>
+								<div class="posts-loop-title">
+								</div>
+								<div class="posts-loop-content" id="wrap-concours">
+									
+								</div>
+                                
+								</div>
+							</div>
+						</div>  
+					</div>  
+				</div>  
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+			</div> 
+            <footer class="colophon site-info">
+				<div class="container-full">
+					<div class="footer-more">
+						<div class="container-boxed">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="noo-bottom-bar-content">
+										© 2024 Ministère de la Fonction Publique , du Travail et de la Protection Sociale | <a href="User_accecptance.php" style="color:White">Conditions d'utilisation</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>  
+			</footer>   
 		</div>  
-        
-        <a><br>Veuillez patienter, la création de votre compte est en cours...</a>
 		<a href="#" class="go-to-top hidden-print"><i class="fa fa-angle-up"></i></a>
 
 		<script type='text/javascript' src='js/jquery.js'></script>
-        <script type='text/javascript' src='js/API.js'></script>
 		<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
 		<script type='text/javascript' src='js/modernizr-2.7.1.min.js'></script>
 		<script type='text/javascript' src='js/jquery.cookie.js'></script>
@@ -115,35 +203,13 @@
 		<script type='text/javascript' src='js/jquery.carouFredSel-6.2.1-packed.js'></script>
 		<script type='text/javascript' src='js/custom.js'></script>
         
+		<script type='text/javascript' src='js/API.js'></script>
+        
         <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script type="text/javascript" src="js/jquery.form-validator.min.js"></script>
     <script type="text/javascript" src="js/placeholder.js"></script>
     <script type="text/javascript" src="js/coustem.js"></script>
-        
-        <div class="memberModalRegister modal fade" id="errorMessages" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-member">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close" id="buttonModal">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<h4 class="modal-title">Alerte</h4>
-					</div>
-					<div class="modal-body">
-						<form class="noo-ajax-register-form form-horizontal container-boxed2">   
-                        <div class="job-desc">
-                        <p id="messageErreur">Erreur</p>
-                            <br>
-							<div class="form-group text-center">
-                                <button type="reset" class="btn btn-primary" onclick="closeModal()">Ok</button>
-							</div>
-                            </div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
 	</body>
 </html>
