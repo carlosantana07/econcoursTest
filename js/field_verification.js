@@ -973,12 +973,12 @@ function redirect() {
 function alertMessageUser(){
     
    setUser();
-    alert("Message_Alerte: Les inscriptions aux concours professionnels sont prolongés jusqu'au 1er Août 2020 à minuit. Par ailleurs les concours de  Médecin Option:  Infectiologie et Transfusion sanguine seront affichés bientôt. Nous nous excusons pour le désagrément.");
+    alert("Message_Alerte: Les inscriptions aux concours professionnels sont prolongés jusqu'au 1er Août 2024 à minuit. Par ailleurs les concours de  Médecin Option:  Infectiologie et Transfusion sanguine seront affichés bientôt. Nous nous excusons pour le désagrément.");
 }
 //==========================================================================================================================================
 function alertMessage(){
     
-    alert("Message_Alerte: Les inscriptions aux concours professionnels sont prolongés jusqu'au 1er Août 2020 à minuit. Par ailleurs les concours de  Médecin Option:  Infectiologie et Transfusion sanguine seront affichés bientôt. Nous nous excusons pour le désagrément.");
+    alert("Message_Alerte: Les inscriptions aux concours professionnels sont prolongés jusqu'au 1er Août 2024 à minuit. Par ailleurs les concours de  Médecin Option:  Infectiologie et Transfusion sanguine seront affichés bientôt. Nous nous excusons pour le désagrément.");
 }
 //==========================================================================================================================================
 function redirectPro(){

@@ -548,7 +548,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/BF.png";
+        //image.src = "../images/gn.png";
         //setting the div ids 
         //=====================================================================
         
@@ -580,7 +580,7 @@ postData({ login: true })
         //date tree 
         time.appendChild(iconDate);
         //time.appendChild(document.createTextNode(data.data[i].date));
-        time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+        time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
         date.appendChild(time);
         
         //button tree
@@ -767,7 +767,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/BF.png";
+        //image.src = "../images/gn.png";
         //setting the div ids 
         //=====================================================================
         
@@ -799,7 +799,7 @@ postData({ login: true })
         //date tree 
         time.appendChild(iconDate);
         //time.appendChild(document.createTextNode(data.data[i].date));
-        time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+        time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
         date.appendChild(time);
         
         //button tree
@@ -973,7 +973,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/BF.png";
+        //image.src = "../images/gn.png";
         //setting the div ids 
         //=====================================================================
         
@@ -1005,7 +1005,7 @@ postData({ login: true })
         //date tree 
         time.appendChild(iconDate);
         //time.appendChild(document.createTextNode(data.data[i].date));
-        time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+        time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
         date.appendChild(time);
         
         //button tree
@@ -1191,7 +1191,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/BF.png";
+        //image.src = "../images/gn.png";
         //setting the div ids 
         //=====================================================================
         
@@ -1223,7 +1223,7 @@ postData({ login: true })
         //date tree 
         time.appendChild(iconDate);
         //time.appendChild(document.createTextNode(data.data[i].date));
-        time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+        time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
         date.appendChild(time);
         
         //button tree
@@ -1405,7 +1405,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/BF.png";
+        //image.src = "../images/gn.png";
         //setting the div ids 
         //=====================================================================
         
@@ -1437,7 +1437,7 @@ postData({ login: true })
         //date tree 
         time.appendChild(iconDate);
         //time.appendChild(document.createTextNode(data.data[i].date));
-        time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+        time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
         date.appendChild(time);
         
         //button tree
@@ -1609,7 +1609,7 @@ function loadConcoursInfo(){
     pageHeading.appendChild(pageTitle);
     
     time.appendChild(iconTime);
-    time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+    time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
     date.appendChild(time);
     
     
@@ -1753,7 +1753,7 @@ function loadConcoursInfoAcceuil(){
     pageHeading.appendChild(pageTitle);
     
     time.appendChild(iconTime);
-    time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+    time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
     date.appendChild(time);
     
     
@@ -2422,7 +2422,7 @@ postData({ change: true })
     
     var em = document.createElement("em");
     //em.appendChild(document.createTextNode("  " + exam.date));
-    em.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+    em.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
     
     var tdCenter = document.createElement("td");
     tdCenter.className = "text-center";
@@ -3078,7 +3078,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/BF.png";
+        //image.src = "../images/gn.png";
         //setting the div ids 
         //=====================================================================
         //=====================================================================
@@ -3097,7 +3097,7 @@ postData({ login: true })
         //date tree 
         time.appendChild(iconDate);
         //time.appendChild(document.createTextNode(data.data[i].date));
-        time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+        time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
         date.appendChild(time);
         
         //button tree
@@ -3304,7 +3304,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/BF.png";
+        //image.src = "../images/gn.png";
         //setting the div ids 
         //=====================================================================
         //=====================================================================
@@ -3323,7 +3323,7 @@ postData({ login: true })
         //date tree 
         time.appendChild(iconDate);
         //time.appendChild(document.createTextNode(data.data[i].date));
-        time.appendChild(document.createTextNode("Fermeture le 08-08-2020"));
+        time.appendChild(document.createTextNode("Fermeture le 08-08-2024"));
         date.appendChild(time);
         
         //button tree
