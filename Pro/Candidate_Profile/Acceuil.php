@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-
+        
 		<link rel="shortcut icon" href="../images/GN.png"/>
 		<title>Acceuil | Econcours</title>
 
@@ -21,14 +21,14 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 	</head>
-	<body onload="alertMessageUser()">
+	<body >
 		<div class="site">
 			<header class="noo-header" id="noo-header">
 				<div class="navbar-wrapper">
 					<div class="navbar navbar-default fixed-top shrinkable">
 						<div class="container-boxed max">
 							<div class="navbar-header">
-								<h1 class="sr-only">MFPTPS</h1>
+								<h1 class="sr-only">MFPTPS</h1> 
 								<a class="navbar-toggle collapsed" data-toggle="collapse" data-target=".noo-navbar-collapse">
 									<span class="sr-only">Navigation</span>
 									<i class="fa fa-bars"></i>
@@ -40,7 +40,7 @@
 									<img class="noo-logo-img noo-logo-normal" src="../images/GN.png" alt="">
 									<img class="noo-logo-mobile-img noo-logo-normal" src="../images/GN.png" alt="">
 								</a>
-							</div>
+							</div>  
 							<nav class="collapse navbar-collapse noo-user-navbar-collapse">
 								<ul class="navbar-nav sf-menu">
                                     <li><a href="Profil_Candidat.php"><i class="fa fa-edit"></i>Mon Profil</a></li>
@@ -90,10 +90,10 @@
 										</a>
 									</li>
 								</ul>
-							</nav>
-                            <a><br>MFPTPS</a>
-						</div>
-					</div>
+							</nav> 
+                            <a><br>MFPTPS</a>  
+						</div>  
+					</div>  
 				</div>
 			</header>
 			<div class="container-wrap">
@@ -103,7 +103,7 @@
 							<div class="row pt-0 pb-0">
 								<div class="col-md-12">
                                     <br>
-                                    <br>
+                                    <br>				
                                     <div class="section-title">
                                         <p class="search-top-title">Bienvenue</p>
                                         <h2>E-CONCOURS</h2>
@@ -116,7 +116,7 @@
                                 <br>
                                 </div>
 							</div>
-
+                            
                             <div class="section-title"><a target="_blank">Nombre de visiteurs:</a><!-- Start of WebFreeCounter Code -->
 <a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gemfdaxa&nd=9&style=1" border="0" alt="visitor counter"></a>
 <!-- End of WebFreeCounter Code -->
@@ -225,11 +225,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </section>
-                        </div>
-                    </div>
-				</div>
-			</div>
+                            </section>                 
+                        </div> 
+                    </div> 
+				</div> 
+			</div> 
             <footer class="colophon site-info">
 				<div class="container-full">
 					<div class="footer-more">
@@ -243,9 +243,9 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</footer>
-		</div>
+				</div>  
+			</footer>   
+		</div>  
 		<a href="#" class="go-to-top hidden-print"><i class="fa fa-angle-up"></i></a>
 
 		<script type='text/javascript' src='../js/jquery.js'></script>

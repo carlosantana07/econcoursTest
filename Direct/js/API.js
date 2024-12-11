@@ -548,7 +548,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/gn.png";
+        //image.src = "../images/GN.png";
         //setting the div ids 
         //=====================================================================
         
@@ -767,7 +767,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/gn.png";
+        //image.src = "../images/GN.png";
         //setting the div ids 
         //=====================================================================
         
@@ -973,7 +973,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/gn.png";
+        //image.src = "../images/GN.png";
         //setting the div ids 
         //=====================================================================
         
@@ -1191,7 +1191,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/gn.png";
+        //image.src = "../images/GN.png";
         //setting the div ids 
         //=====================================================================
         
@@ -1405,7 +1405,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/gn.png";
+        //image.src = "../images/GN.png";
         //setting the div ids 
         //=====================================================================
         
@@ -3078,7 +3078,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/gn.png";
+        //image.src = "../images/GN.png";
         //setting the div ids 
         //=====================================================================
         //=====================================================================
@@ -3304,7 +3304,7 @@ postData({ login: true })
        // var image = document.createElement("img");
         //image.width = "50";
         //image.height = "50";
-        //image.src = "../images/gn.png";
+        //image.src = "../images/GN.png";
         //setting the div ids 
         //=====================================================================
         //=====================================================================

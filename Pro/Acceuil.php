@@ -3,8 +3,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-   
-		<link rel="shortcut icon" href="images/gn.png"/>
+
+		<link rel="shortcut icon" href="images/GN.png"/>
 		<title>Acceuil | Econcours</title>
 
 		<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
@@ -20,7 +20,7 @@
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-         
+
 	</head>
 	<body>
 		<div class="site">
@@ -29,7 +29,7 @@
 					<div class="navbar navbar-default fixed-top shrinkable">
 						<div class="container-boxed max">
 							<div class="navbar-header">
-								<h1 class="sr-only">MFPTPS</h1> 
+								<h1 class="sr-only">MFPTPS</h1>
 								<a class="navbar-toggle collapsed" data-toggle="collapse" data-target=".noo-navbar-collapse">
 									<span class="sr-only">Navigation</span>
 									<i class="fa fa-bars"></i>
@@ -38,12 +38,12 @@
 									<i class="fa fa-user"></i>
 								</a>
 								<a href="Acceuil.php" class="navbar-brand">
-									<img class="noo-logo-img noo-logo-normal" src="images/gn.png" alt="">
-									<img class="noo-logo-mobile-img noo-logo-normal" src="images/gn.png" alt="">
+									<img class="noo-logo-img noo-logo-normal" src="images/GN.png" alt="">
+									<img class="noo-logo-mobile-img noo-logo-normal" src="images/GN.png" alt="">
 								</a>
-                                
-                                    
-							</div>  
+
+
+							</div>
 							<nav class="collapse navbar-collapse noo-user-navbar-collapse">
 								<ul class="navbar-nav sf-menu">
 									<li>
@@ -82,14 +82,14 @@
 										</a>
 									</li>
 								</ul>
-							</nav> 
-                            <a><br>MFPTPS</a>  
-						</div>  
-					</div>  
+							</nav>
+                            <a><br>MFPTPS</a>
+						</div>
+					</div>
 				</div>
 			</header>
-            
-            
+
+
 				<div class="main-content container-fullwidth">
 					<div class="row">
 						<div class="noo-main col-md-12">
@@ -97,14 +97,14 @@
 								<div class="col-md-12">
                                     <br>
                                     <br>
-											
+
                 <div class="section-title">
                     <p class="search-top-title">Bienvenue</p>
                     <h2>E-CONCOURS</h2>
                     <p class="search-top-title">Le portail d'accès à la Fonction Publique.</p>
                 </div>
                                     <div class="job-search-info text-center">
-									            <img class="noo-logo-img noo-logo-normal" src="images/gn.png"  height="142" width="142" alt="">
+									            <img class="noo-logo-img noo-logo-normal" src="images/GN.png"  height="142" width="142" alt="">
 											</div>
                                 <br>
                                 <br>
@@ -127,7 +127,7 @@
                 </div>
 											<div class="noo-step-icon clearfix">
 												<ul class="noo-step-icon-3">
-                                                      
+
 													<li>
 														<span class="noo-step-icon-item">
 															<a href="Enregistrement.php">
@@ -219,10 +219,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </section>                 
-                        </div> 
-                    </div> 
-            </div> 
+                            </section>
+                        </div>
+                    </div>
+            </div>
             <footer class="colophon site-info">
 				<div class="container-full">
 					<div class="footer-more">
@@ -236,9 +236,9 @@
 							</div>
 						</div>
 					</div>
-				</div>  
-			</footer>   
-		</div>  
+				</div>
+			</footer>
+		</div>
 		<a href="#" class="go-to-top hidden-print"><i class="fa fa-angle-up"></i></a>
 
 		<script type='text/javascript' src='js/jquery.js'></script>

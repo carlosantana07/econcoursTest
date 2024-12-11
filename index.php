@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
-		<link rel="shortcut icon" href="images/gn.png"/>
+		<link rel="shortcut icon" href="images/GN.png"/>
 		<title>Connexion | Econcours</title>
 
 		<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
@@ -39,7 +39,7 @@
 						                      <h1 class="modal-title">E-CONCOURS 2024</h1>
 
                                     <div class="job-search-info text-center">
-									            <img class="noo-logo-img noo-logo-normal" src="images/gn.png"  height="142" width="142" alt="">
+									            <img class="noo-logo-img noo-logo-normal" src="images/GN.png"  height="142" width="142" alt="">
 											</div>
 					                       </div>
 					                       <div class="modal-body">

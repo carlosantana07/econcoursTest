@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
    
-		<link rel="shortcut icon" href="images/gn.png"/>
+		<link rel="shortcut icon" href="images/GN.png"/>
 		<title>Acceuil | Econcours</title>
 
 		<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
@@ -38,8 +38,8 @@
 									<i class="fa fa-user"></i>
 								</a>
 								<a href="Acceuil.php" class="navbar-brand">
-									<img class="noo-logo-img noo-logo-normal" src="images/gn.png" alt="">
-									<img class="noo-logo-mobile-img noo-logo-normal" src="images/gn.png" alt="">
+									<img class="noo-logo-img noo-logo-normal" src="images/GN.png" alt="">
+									<img class="noo-logo-mobile-img noo-logo-normal" src="images/GN.png" alt="">
 								</a>
                                 
                                     
@@ -104,7 +104,7 @@
                     <p class="search-top-title">Le portail d'accès à la Fonction Publique.</p>
                 </div>
                                     <div class="job-search-info text-center">
-									            <img class="noo-logo-img noo-logo-normal" src="images/gn.png"  height="142" width="142" alt="">
+									            <img class="noo-logo-img noo-logo-normal" src="images/GN.png"  height="142" width="142" alt="">
 											</div>
                                 <br>
                                 <br>

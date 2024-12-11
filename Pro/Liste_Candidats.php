@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-		<link rel="shortcut icon" href="images/gn.png"/>
+		<link rel="shortcut icon" href="images/GN.png"/>
 		<title>Acceuil | Econcours</title>
 
 		<link rel='stylesheet' href='css/style.css' type='text/css' media='all'/>
@@ -35,8 +35,8 @@
 									<i class="fa fa-user"></i>
 								</a>
 								<a href="Acceuil.php" class="navbar-brand">
-									<img class="noo-logo-img noo-logo-normal" src="images/gn.png" alt="">
-									<img class="noo-logo-mobile-img noo-logo-normal" src="images/gn.png" alt="">
+									<img class="noo-logo-img noo-logo-normal" src="images/GN.png" alt="">
+									<img class="noo-logo-mobile-img noo-logo-normal" src="images/GN.png" alt="">
 								</a>
 							</div>  
 							<nav class="collapse navbar-collapse noo-user-navbar-collapse">
@@ -94,7 +94,7 @@
 												<p class="search-top-title">Liste des Candidats</p>
 												<h3 class="search-main-title">E-Concours 2024</h3>
 												<p class="search-top-title">Voici la liste des candidats</p>
-									            <img class="noo-logo-img noo-logo-normal" src="images/gn.png"  height="142" width="142" alt="">
+									            <img class="noo-logo-img noo-logo-normal" src="images/GN.png"  height="142" width="142" alt="">
 											</div>
 										</div>
 									</div>
